@@ -13,7 +13,6 @@ namespace multithreaded_consoleapp
             int[] arr = RandomArray(n);
             SingleThread(arr); // utilises a local max variable (not static "maxMultiThread")
             MultiThreadLoop(arr);
-            maxMultiThread = 0;
             Console.ReadKey();
         }
 
@@ -101,7 +100,6 @@ namespace multithreaded_consoleapp
             Console.WriteLine($"{watch.ElapsedMilliseconds} ms to complete.");
         }
 
-        //returns an array of random int elements of size n
         static int[] RandomArray(int n)
         {
             var arr = new int[n];
